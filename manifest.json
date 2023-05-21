@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Phụ đề - chatGPT",
+  "description": "Giúp thao tác nhanh cho phụ đề chatGPT",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "./logo.png"
+  },
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "css": ["index.css"],
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://auth0.openai.com/*"
+      ]
+    }
+  ]
+}
